@@ -1,0 +1,25 @@
+$green-color: green;
+$yellow-color: yellow;
+
+$font-size: 50px;
+
+$text-decoration-line: underline;
+
+.nav {
+  //! 중첩
+  .child1 {
+    background-color: azure;
+    //! 변수
+    color: $green-color;
+    font-size: $font-size;
+    //! 보간
+    #{text-decoration-line}: $text-decoration-line;
+  }
+  //! 부모 참조
+  &_child2 {
+    background-color: tan;
+    color: $yellow-color;
+    font-size: $font-size;
+    #{text-decoration-line}: $text-decoration-line;
+  }
+}
