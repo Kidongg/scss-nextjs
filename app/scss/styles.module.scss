@@ -7,7 +7,7 @@ $text-decoration-line: underline;
 
 .nav {
   //! 중첩
-  .child1 {
+  .nav_child1 {
     background-color: azure;
     //! 변수
     color: $green-color;
