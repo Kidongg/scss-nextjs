@@ -1,8 +1,10 @@
+//! 믹스인
 @mixin set-color {
   color: aquamarine;
   font-size: 100px;
 }
 
+//! 믹스인 함수
 @mixin set-color-dymanic($color, $font-size) {
   color: $color;
   font-size: $font-size;
