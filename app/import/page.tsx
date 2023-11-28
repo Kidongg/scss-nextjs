@@ -6,7 +6,6 @@ const page = () => {
     <div>
       <div className={styles.nav_1}>IMPORT_1</div>
       <div className={styles.nav_2}>IMPORT_2</div>
-      <div className={styles.nav_3}>IMPORT_3</div>
     </div>
   );
 };
