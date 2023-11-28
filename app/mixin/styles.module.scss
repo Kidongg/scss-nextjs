@@ -4,14 +4,14 @@
   font-size: 100px;
 }
 
+.nav_1 {
+  @include set-color;
+}
+
 //! 믹스인 함수
 @mixin set-color-dymanic($color, $font-size) {
   color: $color;
   font-size: $font-size;
-}
-
-.nav_1 {
-  @include set-color;
 }
 
 .nav_2 {

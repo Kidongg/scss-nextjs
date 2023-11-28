@@ -1,0 +1,23 @@
+//! 상속 셀렉터
+.nav_1 {
+  background-color: aquamarine;
+  font-size: 100px;
+}
+
+//! 상속
+.nav_2 {
+  @extend .nav_1;
+  color: chocolate;
+}
+
+//! 상속만을 위한 셀렉터
+%nav {
+  background-color: darkcyan;
+  font-size: 100px;
+}
+
+//! 상속
+.nav_3 {
+  @extend %nav;
+  color: deepskyblue;
+}
