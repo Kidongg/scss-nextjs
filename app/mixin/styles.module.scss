@@ -1,0 +1,17 @@
+@mixin set-color {
+  color: aquamarine;
+  font-size: 100px;
+}
+
+@mixin set-color-dymanic($color, $font-size) {
+  color: $color;
+  font-size: $font-size;
+}
+
+.nav_1 {
+  @include set-color;
+}
+
+.nav_2 {
+  @include set-color-dymanic(blue, 150px);
+}
