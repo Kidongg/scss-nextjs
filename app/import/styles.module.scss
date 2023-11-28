@@ -1,0 +1,10 @@
+//! 지역으로 임포트하기
+@use "common_2";
+
+//! 전역으로 임포트하기
+@import "common";
+
+.nav_2 {
+  background-color: grey;
+  font-size: 100px;
+}
