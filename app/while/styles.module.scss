@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 4vmin;
+}
+
+.item {
+  font-size: 20vmin;
+
+  $idx: 1;
+  @while $idx < 5 {
+    &:nth-child(#{$idx}) {
+      filter: grayscale(1);
+      font-size: calc(10vmin + #{$idx * 2}vmin);
+    }
+    $idx: $idx + 1;
+  }
+}
