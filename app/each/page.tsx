@@ -1,7 +1,14 @@
 import React from "react";
+import styles from "./styles.module.scss";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div className={styles.footer}>
+      <div className={`${styles.sns} ${styles.facebook}`}></div>
+      <div className={`${styles.sns} ${styles.youtube}`}></div>
+      <div className={`${styles.sns} ${styles.instagram}`}></div>
+    </div>
+  );
 };
 
 export default page;

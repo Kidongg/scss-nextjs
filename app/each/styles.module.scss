@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  gap: 10px;
+  font-family: sans-serif;
+}
+
+.sns {
+  $_list: facebook, youtube, instagram;
+  $_map: (
+    "facebook": skyblue,
+    "instagram": hotpink,
+    "youtube": red,
+  );
+
+  width: calc(30px + 10vmin);
+  height: calc(30px + 10vmin);
+  padding: calc(10px + 2vmin);
+  background-size: calc(30px + 10vmin);
+  background-repeat: no-repeat;
+
+  @each $sns in $_list {
+    &.#{$sns} {
+      background-image: url("/#{$sns}.png");
+    }
+  }
+
+  @each $sns, $color in $_map {
+    &.#{$sns} {
+      background-color: $color;
+    }
+  }
+}
