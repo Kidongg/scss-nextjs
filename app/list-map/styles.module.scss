@@ -1,0 +1,56 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+  align-items: flex-start;
+  padding: 2vmin;
+}
+
+$status: (
+  opened: (
+    color: lightgray,
+  ),
+  progress: (
+    color: lightskyblue,
+    isImportant: true,
+  ),
+  resolved: (
+    color: lightseagreen,
+    isImportant: true,
+  ),
+  closed: (
+    color: lightsteelblue,
+  ),
+);
+
+.status {
+  @each $type, $value in $status {
+    $i: list.index(($status), ($type $value));
+    $isImporant: map.has-key($value, "isImportant");
+
+    &.#{$type} {
+      $color: map.get($value, "color");
+      background-color: $color;
+
+      @if $isImporant {
+        font-weight: bold;
+      }
+
+      @if $i == list.length($status) {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.status {
+  display: inline-block;
+  font-size: 10vmin;
+  padding: 4vmin 8vmin;
+  text-align: center;
+  border-radius: 12vmin;
+}
