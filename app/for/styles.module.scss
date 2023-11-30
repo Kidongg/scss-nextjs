@@ -1,0 +1,26 @@
+@import "sass:color";
+
+.item {
+  $_length: 10;
+  $_color: #b2c0d5;
+
+  @for $i from 1 through $_length {
+    &:nth-child(#{$i}) {
+      z-index: ($_length + 1) - $i;
+      background-color: color.scale($_color, $lightness: $i * -5%);
+    }
+  }
+
+  position: relative;
+  display: inline-block;
+  width: calc(60px + 4vmin);
+  height: calc(60px + 4vmin);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: calc(16px + 2vmin);
+  line-height: calc(60px + 4vmin);
+  box-shadow: 0px 6px 16px 0px rgba(33, 33, 33, 0.1),
+    0px 1px 4px 0px rgba(33, 33, 33, 0.05);
+}
